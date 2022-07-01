@@ -11,7 +11,7 @@ const profile = require("./controllers/profile");
 const db = knex({
   client: "pg",
   connection: {
-    host: "localhost",
+    host: "postgresql-elliptical-08766",
     port: "5432",
     user: "postgres",
     password: "1234",

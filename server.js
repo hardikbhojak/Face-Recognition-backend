@@ -11,11 +11,12 @@ const profile = require("./controllers/profile");
 const db = knex({
   client: "pg",
   connection: {
-    host: "postgresql-elliptical-08766",
-    port: "5432",
-    user: "postgres",
-    password: "1234",
-    database: "facerecog",
+    host: process.env.DATABASE_URL,
+    ssl: true,
+    // port: "5432",
+    // user: "postgres",
+    // password: "1234",
+    // database: "facerecog",
   },
 });
 

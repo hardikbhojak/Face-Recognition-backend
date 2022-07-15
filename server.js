@@ -10,7 +10,7 @@ const app = express();
 const profile = require("./controllers/profile");
 const cors = require("cors");
 
-const DBHOST = process.env.DB_HOST;
+const DBHOST = process.env.DB_URL;
 const DBNAME = process.env.DB_NAME;
 const DBUSER = process.env.DB_USER;
 const DBPASSWORD = process.env.DB_PASSWORD;

@@ -30,7 +30,7 @@ const db = knex({
 });
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: ["*"] }));
 
 app.get("/", (req, res) => {
   console.log("GOT REQUEST");

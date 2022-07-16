@@ -38,22 +38,27 @@ app.get("/", (req, res) => {
 });
 
 app.post("/signin", (req, res) => {
+  console.log({ REQUEST: req.body });
   signin.handleSignIn(req, res, db, bcrypt);
 });
 
 app.post("/register", (req, res) => {
+  console.log({ REQUEST: req.body });
   register.handleRegister(req, res, db, bcrypt);
 });
 
 app.get("/profile/:id", (req, res) => {
+  console.log({ REQUEST: req.body });
   profile.handleProfile(req, res, db);
 });
 
 app.put("/image", (req, res) => {
+  console.log({ REQUEST: req.body });
   image.handleImagePut(req, res, db);
 });
 
 app.post("/imageurl", (req, res) => {
+  console.log({ REQUEST: req.body });
   image.handleApiCall(req, res);
 });
 app.listen(process.env.PORT || 4000, () => {
